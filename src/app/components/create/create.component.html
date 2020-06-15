@@ -1,0 +1,64 @@
+<div class="container" *ngIf="project">
+<h2>{{title}}</h2>
+
+<div class="form-status" *ngIf="status=='success'">
+  <span>Se Guardo Correctamente el proyecto, puedes <a [routerLink]="['/proyecto', project._id]" routerLinkActive="router-link-active" >Verlo Aqui</a></span>
+ 
+</div>
+<div class="form-status" *ngIf="status=='successnt'">
+ 
+    <span >No se pudo Guardar el proyecto</span>
+  </div>
+
+<form (ngSubmit)="onSubmit(projectForm)" #projectForm="ngForm" enctype="multipart/form-data">
+
+<p>
+    <label for="name">Nombre</label>
+    <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required>
+    <span *ngIf="name.touched && !name.valid">El nombre es obligatorio</span>
+</p>
+
+<p>
+    <label for="description">Description</label>
+    <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+    <span *ngIf="description.touched && !description.valid">La descripcion es obligatoria</span>
+</p>
+
+<p>
+    <label for="category">Category</label>
+    <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required>
+    <span *ngIf="category.touched && !category.valid">La categoria es obligatoria</span>
+</p>
+
+<p>
+    <label for="year">Año de realizacion</label>
+    <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" required>
+    <span *ngIf="year.touched && !year.valid">El año es obligatorio</span>
+</p>
+
+<p>
+    <label for="langs">Lenguajes</label>
+    <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required>
+    <span *ngIf="langs.touched && !langs.valid">El lenguaje es obligatorio</span>
+</p>
+
+
+<p>
+    <label for="image">Imagen de proyecto</label>
+    <span class="image" *ngIf="project.image" style="float: none;">
+
+        <img src="{{url+'get-image/'+project.image}}" *ngIf="project.image" style=" vertical-align: middle;
+        width: 50px;
+        height: 50px;
+        border-radius: 25%;">
+    </span>
+    <br>
+    <input type="file"  name="image"  #image="ngModel" [(ngModel)]="project.image" placeholder="subir imagen" (change)="fileChangeEvent($event)">
+   <!--  <span *ngIf="image.touched && !image.valid">El lenguaje es obligatorio</span> -->
+</p>
+
+<input type="submit" value="Guardar" [disabled]="!projectForm.form.valid">
+</form>
+
+
+</div>

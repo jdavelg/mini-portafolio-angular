@@ -1,0 +1,291 @@
+/* //import Fonts Custom */
+@font-face{
+    font-family: "yanone";
+    src: url('./fonts/yanone.ttf');
+}
+@font-face{
+    font-family: "finger";
+    src: url('./fonts/finger.ttf');
+}
+
+
+/* generales */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+ font-family: "yanone", Arial, Helvetica, sans-serif;  
+ font-size: 20px;
+ background-image: url(../pattern.png);
+ background-attachment: fixed;
+}
+.clearfix{
+
+    float: none;
+    clear: both;
+}
+
+/* BArra de Navegacion/ cabecera */
+
+header{
+    display: block;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(245, 13, 60, 0.801);
+    position: fixed;
+    text-transform: uppercase;
+}
+header ul{
+    display: block;
+    width: 55%;
+    height: inherit;
+    margin: 0px auto;
+}
+header ul li{
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 90px;
+    margin-top:-3px ;
+
+}
+
+header  a{
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+
+}
+
+header a:hover{
+background-color: rgba(39, 1, 1, 0.623);
+
+}
+
+/* //Logotipo */
+
+
+#logo{
+
+    font-family: "finger";
+    font-size: 30px;
+}
+#logo a{
+    transition: color 500ms, transform 500ms;
+}
+
+ #logo a:hover,
+ .actived
+ {
+    background: transparent;
+    color:rgb(128, 128, 128);
+    transform: scale(1.50,1.50);
+}
+
+/* principal content */
+
+#content{
+    min-height: 630px;
+    height: auto;
+width: 75%;
+margin: 0px auto;
+box-shadow: 0px 0px 40px black;
+border-left: 1px solid #b7b7b7;
+background-color: rgba(245, 245, 220, 0.712);
+padding-top: 120px;
+
+}
+
+/* //pie de pagina */
+footer{
+width: 75%;
+margin: 0px auto;
+margin-top: 18px;
+color: rgba(0, 0, 0, 0.609);
+
+}
+
+/* //sobre mi */
+
+#title{
+    width: 70%;
+    margin :0px auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom:70px ;
+
+}
+
+#title h1{
+    font-family: "finger";
+    font-size: 60px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#title h2{
+
+    font-size: 25px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+article.about{
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+.about h2{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.about p{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: justify;
+}
+
+/* estilos para formulario */
+.container{
+    padding: 50px;
+    padding-top: 10px;
+    
+
+}
+.container .image{
+float:left;
+width: 47%;
+
+
+}
+
+.container .image img{
+    
+    width: 100%;
+    
+    
+    }
+.container .data{
+   float: left; 
+   width: 48%;
+   margin-left: 25px;
+}
+.container h2{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom:10px;
+    margin-bottom: 15px;
+
+}
+
+form{
+    width: 80%;
+}
+form label{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[ type="text"],
+form input[ type="number"],
+form input[ type="email"],
+form textarea{
+
+    width: 40%;
+    padding: 5px;
+
+}
+
+form button,
+form input[ type="submit"],
+.button-delete,
+.button-edit{
+display: block;
+    font-size:18px;
+    padding :10px;
+    margin-top: 15px;
+    color:white;
+    background-color: rgb(245, 13, 59);
+    border:1px solid rgb(100, 0, 0);
+    cursor: pointer;
+    border-radius: 15px;
+}
+form button:hover,
+form input[ type="submit"]:hover{
+
+    background-color: rgb(255, 90, 69);
+
+}
+.button-delete,
+.button-edit{
+    width: 20%;
+    float: left;
+    margin-right: 14px;
+    text-decoration: none;
+}
+.button-edit{
+    background-color: rgb(255, 208, 88);
+    color: black;
+    border: 0.6px solid black;
+}
+
+form span{
+
+    background-color: yellow;
+    color: black;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-left: 8px;
+    padding: 3px;
+}
+
+.form-status{
+
+    background-color: yellow;
+    color: black;
+    font-size: 19px;
+}
+
+/* Pagina de proyectos */
+.project{
+    list-style: none;
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.project .image{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+  
+ 
+  
+}
+.project img{
+    width: 100%;
+
+
+}
+.project a{
+    text-decoration: none;
+    color: black;
+}
+
