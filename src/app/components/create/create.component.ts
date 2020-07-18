@@ -20,7 +20,7 @@ public project:Project;
 public status:string;
 public filesToUpload:Array<File>
 public save_project;
-
+public url:string
 
   constructor( 
     private _projectService: ProjectService,
@@ -28,7 +28,7 @@ public save_project;
     ) { 
 this.title="crear proyecto",
 this.project= new Project('','','','',2019,'','');
-
+this.url=Global.url;
 
 
   }

@@ -16,13 +16,13 @@ ProjectService,
 })
 export class DetailComponent implements OnInit {
 
-private url:string;
+public url:string;
 public confirm:boolean;
   constructor(
 private _proyectService:ProjectService,
 private _router:Router,
 private _route:ActivatedRoute,
-private project:Project,
+public project:Project,
 
 
   ) { 
